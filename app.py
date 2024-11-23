@@ -332,4 +332,4 @@ if st.button("Predict"):
         Destination_New_Delhi]])
 
 
-    st.title("The Predicted Price Of House is:" + str(np.round(float(model.predict(query)[0])),2)
+    st.title("The Predicted Price Of House is:" + str(np.round(float(model.predict(query)[0]),2))
