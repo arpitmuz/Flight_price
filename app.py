@@ -10,7 +10,7 @@ model=pickle.load(open('flight_rf.pkl','rb'))
 st.title("Flight Fare Prediction System:")
 
 # DATE OF JOURNEY
-date_dep=st.date_input("Enter Your Departure Date:")
+date_dep=st.date_input("Enter Your Departure Date:",value=None)
 Journey_day = int(pd.to_datetime(date_dep, format="%Y-%m-%dT").day)
 Journey_Month = int(pd.to_datetime(date_dep, format="%Y-%m-%dT").month)
 # print(Journey_day,Journey_Month)
@@ -191,7 +191,7 @@ else:
     Airline_Trujet = 0
 
 # SOURCE
-Source =st.selectbox("Select The Source City",['Source_Delhi','Source_Kolkata','Source_Mumbai','Source_Chennai','Source_Banglore'],value=None)
+Source =st.selectbox("Select The Source City",['Source_Delhi','Source_Kolkata','Source_Mumbai','Source_Chennai','Source_Banglore'])
 if (Source == 'Source_Delhi'):
     Source_Delhi = 1
     Source_Kolkata = 0
