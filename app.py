@@ -10,7 +10,7 @@ model=pickle.load(open('flight_rf.pkl','rb'))
 st.title("Flight Fare Prediction System:")
 
 # DATE OF JOURNEY
-date_dep=st.date_input("Enter Your Departure Date:",value=None)
+date_dep=st.date_input("Enter Your Departure Date:")
 Journey_day = int(pd.to_datetime(date_dep, format="%Y-%m-%dT").day)
 Journey_Month = int(pd.to_datetime(date_dep, format="%Y-%m-%dT").month)
 # print(Journey_day,Journey_Month)
